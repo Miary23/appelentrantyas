@@ -10,7 +10,7 @@ function getCurrentSheet() {
 const SHEET_NAME = getCurrentSheet();
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.title = `FRC - ${SHEET_NAME}`;
+  document.title = `Bonjour`;
   loadData();
 });
 
@@ -50,7 +50,7 @@ document.getElementById("personne").addEventListener("change", function () {
   const infoCard = document.getElementById("info");
 
   // Reset des selects FRC
-  ["frc1", "frc4", "frc7"].forEach(id => document.getElementById(id).value = "");
+  ["frc1", "frc4", "frc13"].forEach(id => document.getElementById(id).value = "");
 
   if (idx === "" || !data[idx]) {
     infoCard.style.display = "none";
@@ -65,8 +65,8 @@ document.getElementById("personne").addEventListener("change", function () {
   const dateEmbauche  = row[3] ? row[3].toString().trim() : "Non renseignée";
   
   // FRC existants (ajuste si tes colonnes sont ailleurs !)
-  const niveauFRC4  = row[4] ? row[4].toString().trim() : "";
-  const niveauFRC7  = row[5] ? row[5].toString().trim() : "";
+  const niveauFRC1  = row[4] ? row[4].toString().trim() : "";
+  const niveauFRC4  = row[5] ? row[5].toString().trim() : "";
   const niveauFRC13 = row[6] ? row[6].toString().trim() : "";
 
   // Remplissage des infos
@@ -75,9 +75,9 @@ document.getElementById("personne").addEventListener("change", function () {
   document.getElementById("ancienneteValeur").textContent = dateEmbauche; // ← juste la date brute
 
   // Pré-remplissage des niveaux FRC
-  if (niveauFRC4)  document.getElementById("frc1").value = niveauFRC4;
-  if (niveauFRC7)  document.getElementById("frc4").value = niveauFRC7;
-  if (niveauFRC13) document.getElementById("frc7").value = niveauFRC13;
+  if (niveauFRC1)  document.getElementById("frc1").value = niveauFRC1;
+  if (niveauFRC4)  document.getElementById("frc4").value = niveauFRC4;
+  if (niveauFRC13) document.getElementById("frc13").value = niveauFRC13;
 
   infoCard.style.display = "block";
 });
@@ -100,8 +100,8 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
 
   const frc1 = document.getElementById("frc1").value;
   const frc4 = document.getElementById("frc4").value;
-  const frc7 = document.getElementById("frc7").value;
-  if (!frc1 || !frc4 || !frc7) return showMessage("Tous les niveaux doivent être sélectionnés", "error");
+  const frc13 = document.getElementById("frc13").value;
+  if (!frc1 || !frc4 || !frc13) return showMessage("Tous les niveaux doivent être sélectionnés", "error");
 
   const formData = new FormData();
   formData.append("action", "updateFRC");
@@ -109,7 +109,7 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
   formData.append("rowIndex", idx);
   formData.append("frc1", frc1);
   formData.append("frc4", frc4);
-  formData.append("frc7", frc7);
+  formData.append("frc13", frc13);
 
   try {
     showMessage("Enregistrement en cours...", "loading");

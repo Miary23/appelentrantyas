@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FRC • Mise à jour des compétences</title>
+  <title>Entrants</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -12,11 +12,22 @@
 
   <div class="container">
     <header class="header">
-      <h1>Définition des compétences</h1>
+      <h1>Gestion des Compétences des Collaborateurs</h1>
       <p class="subtitle">Fondamentaux de la Relation Client</p>
     </header>
 
     <div class="competences-grid">
+      <!-- FRC1 -->
+      <div class="competence-card">
+        <h3><span class="badge">FRC1</span> Conduite d'entretien </h3>
+        <ul>
+          <li>Capacité à mener un entretien du début à la fin en suivant un brief précis et sous contrôle d'un superieur.</li>
+          <li>Capacité à mener un entretien et à répondre aux demandes du client.</li>
+          <li>Capacité à personnaliser l'entretien en fonction du profil et de l'historique client
+Capacité à mener un entretien difficile : agressivité de l'interlocuteur et/ou gestion de situations délicates.</li>
+        </ul>
+      </div>
+
       <!-- FRC4 -->
       <div class="competence-card">
         <h3><span class="badge">FRC4</span> Écoute Active</h3>
@@ -24,16 +35,6 @@
           <li>Prendre en compte l'ensemble des demandes client</li>
           <li>Reformuler précisément les besoins exprimés</li>
           <li>Analyser les situations d'impayés et facturation complexe</li>
-        </ul>
-      </div>
-
-      <!-- FRC7 -->
-      <div class="competence-card">
-        <h3><span class="badge">FRC7</span> Agilité Informatique</h3>
-        <ul>
-          <li>Maîtrise avancée de la bureautique</li>
-          <li>Adaptation rapide aux nouveaux outils (CRM, etc.)</li>
-          <li>Utilisation fluide de plusieurs outils en simultané</li>
         </ul>
       </div>
 
@@ -68,7 +69,7 @@
 
       <div class="frc-grid">
         <div class="frc-item">
-          <label>FRC4 - Écoute Active</label>
+          <label>FRC1 - Conduite d'entretien</label>
           <select id="frc1">
             <option value="">-- Choisir le niveau --</option>
             <option value="Hors niveau">Niveau 1 - Hors niveau</option>
@@ -79,7 +80,7 @@
         </div>
 
         <div class="frc-item">
-          <label>FRC7 - Agilité Informatique</label>
+          <label>FRC4 - Écoute Active</label>
           <select id="frc4">
             <option value="">-- Choisir le niveau --</option>
             <option value="Hors niveau">Niveau 1 - Hors niveau</option>
@@ -91,7 +92,7 @@
 
         <div class="frc-item">
           <label>FRC13 - Connaissance Produit et Service</label>
-          <select id="frc7">
+          <select id="frc13">
             <option value="">-- Choisir le niveau --</option>
             <option value="Hors niveau">Niveau 1 - Hors niveau</option>
             <option value="Junior">Niveau 2 - Junior</option>
