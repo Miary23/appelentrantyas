@@ -5,7 +5,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwN0KW4QB8CGkzfesYG6
 // Récupère la feuille depuis l'URL (?sheet=Appel%20Entrant ou ?sheet=Multimédia)
 function getCurrentSheet() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("sheet") || "Multimédia";
+  return params.get("sheet") || "Appel Entrant";
 }
 
 const SHEET_NAME = getCurrentSheet();
@@ -63,3 +63,6 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
     alert("Erreur réseau : " + err.message);
   }
 });
+
+
+// Bonjour
